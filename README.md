@@ -3,14 +3,8 @@
 </h1>
 
 <h4 align="center">
-  🚀 Semana OmniStack 11.0
+  🚀 Semana OmniStack 11.0 - Django <img alt="DevRadar" title="#delicinha" src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="60px" />
 </h4>
-
-<p align="center">
- <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=7159c1&labelColor=000000" alt="PRs welcome!" />
-
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
-</p>
 
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -23,17 +17,16 @@
 <br>
 
 <p align="center">
-  <img alt="BeTheHero" src=".github/bethehero.png" width="100%">
+  <img alt="BeTheHero" src="https://github.com/Rocketseat/semana-omnistack-11/raw/master/.github/bethehero.png" width="100%">
 </p>
 
 ## :rocket: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Node.js](https://nodejs.org/en/)
-- [React](https://reactjs.org)
-- [React Native](https://facebook.github.io/react-native/)
-- [Expo](https://expo.io/)
+- [Django](https://www.djangoproject.com/)
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+- [Django Rest Framework](https://www.django-rest-framework.org/)
 
 ## 💻 Projeto
 
@@ -58,4 +51,6 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+Projeto Original ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+
+Recriado por [Plinio Mikael](https://github.com/pliniomikael)
