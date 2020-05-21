@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<style>
+    .profile-container {
+        width: 100%;
+        max-width: 1180px;
+        padding: 0 30px;
+        margin: 32px auto;
+
+    }
+
+    .profile-container header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .profile-container header span {
+        font-size: 20px;
+        margin-left: 24px;
+    }
+
+    .profile-container header button {
+        height: 60px;
+        width: 50px;
+        border-radius: 4px;
+        border: 1px solid #dcdce6;
+        background: transparent;
+        margin-left: 5px;
+        margin-top: 16px;
+        transition: border-color 0.2s;
+    }
+
+    .profile-container header img {
+        height: 64px;
+    }
+
+    .profile-container header div {
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+
+
+    }
+
+    .profile-container header .register {
+        width: 50%;
+        height: 60px;
+        background: #e02041;
+        border: 0;
+        border-radius: 8px;
+        color: #FFF;
+        font-weight: 700;
+        margin-left: 5px;
+        margin-top: 16px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 60px;
+        transition: filter 0.2s;
+    }
+
+    .profile-container h1 {
+        margin-top: 28px;
+        color: #13131a;
+
+        text-align: center;
+    }
+
+    .profile-container h5 {
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.6;
+        margin-bottom: 24px;
+        color: #737380;
+    }
+
+    .profile-container ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 24px;
+        list-style: none;
+
+    }
+
+    .profile-container ul li {
+        display: grid;
+        background: #FFF;
+        padding: 24px;
+        border-radius: 8px;
+        position: relative;
+    }
+
+    .profile-container ul li button {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        border: 0;
+
+        height: 60px;
+        background: #fff;
+        border: 0;
+        border-radius: 8px;
+        color: #e02041;
+        font-weight: 700;
+        font-size: 18px;
+        transition: filter 0.2s;
+    }
+
+    .profile-container ul li .detailsButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .profile-container ul li button:hover {
+        opacity: 0.8;
+    }
+
+    .profile-container ul li strong {
+        display: block;
+        margin-bottom: 16px;
+        color: #41414d;
+    }
+
+    .profile-container ul li p+strong {
+        margin-top: 32px;
+    }
+
+    .profile-container ul li p {
+        color: #737380;
+        line-height: 21px;
+        font-size: 16px;
+    }
+</style>
+<div class="profile-container">
+    <header>
+        <a href="{% url 'home' %}">
+            <img src="{% static 'logo.svg' %}" alt="Be the Hero" /></a>
+        <span>Total de <strong>{{total}} casos </strong> </span>
+        <div class='button-group'>
+            {% if request.user.is_authenticated %}
+            <a href="{% url 'painel' %}" class="register">Painel</a>
+
+            <form action="{% url 'logout'  %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">
+                    <img style="width: 24px; height: 24px;" src="{% static 'power.png' %}"
+                        class="btn btn-warning"></img>
+                </button>
+            </form>
+            {% else %}
+
+            <a href="{% url 'registrar' %}" class="register">Cadastrar</a>
+            <a href="{% url 'login' %}" class="register">Login</a>
+            {% endif %}
+
+        </div>
+    </header>
+    <h1>Bem Vindo!</h1>
+    <h5>Escolha um dos casos abaixo e salve o dia.</h5>
+    <ul>
+        {% for todo in todos %}
+        <li>
+            <strong>ONG:</strong>
+            <p>{{todo.ong_name}}</p>
+            <strong>CASO:</strong>
+            <p>{{todo.title_case}}</p>
+            <strong>DESCRIÇÃO:</strong>
+            <p> {{todo.description}} </p>
+            <strong>VALOR:</strong>
+            <p>R$ {{todo.value}} reais</p>
+            <div class='detailsButton'>
+
+                <a href="{% url 'detalhe' pk=todo.id  %}">
+                    <button class='detailbutton' type="submit">
+                        Mais Detalhes
+                    </button>
+                </a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
