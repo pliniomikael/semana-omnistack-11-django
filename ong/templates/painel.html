@@ -72,6 +72,11 @@
     right: 24px;
     top: 24px;
     border: 0;
+    background: #fff;
+    color: #e02041;
+    font-weight: 700;
+    font-size: 18px;
+    transition: filter 0.2s;
   }
 
   .profile-container ul li .btn-edit {
@@ -105,7 +110,7 @@
   <header>
     <a href="{% url 'home' %}">
       <img src="{% static 'logo.svg' %}" alt="Be the Hero" /></a>
-    <span>Bem Vinda, {{ user.first_name }} </span>
+    <span>Bem Vinda, <strong>{{ user.first_name }}</strong> </span>
     <a href="{% url 'casosregistrarpage' %}" class="button">Cadastrar Novo Caso</a>
     <form action="{% url 'logout'  %}" method="POST">
       {% csrf_token %}
@@ -161,7 +166,7 @@
       </form>
       <a href="{% url 'editar' pk=cas.id  %}">
         <button class="btn-edit">
-          editar
+          Editar
         </button>
       </a>
     </li>
