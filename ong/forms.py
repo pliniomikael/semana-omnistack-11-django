@@ -42,6 +42,18 @@ class CreateUserForm(UserCreationForm):
 class CreateCase(forms.ModelForm):
     class Meta:
         model = Case
+        fields = ["title_case", "description", "value"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields["title_case"].widget.attrs["placeholder"] = "Titulo do Caso"
+        self.fields["description"].widget.attrs = {"size": "40", "placeholder": "Descrição"}
+        self.fields["value"].widget.attrs["placeholder"] = "Valor"
+
+
+class EditCase(forms.ModelForm):
+    class Meta:
+        model = Case
         fields = ["title_case", "description", "value", "status"]
 
     def __init__(self, *args, **kwargs):
@@ -49,4 +61,4 @@ class CreateCase(forms.ModelForm):
         self.fields["title_case"].widget.attrs["placeholder"] = "Titulo do Caso"
         self.fields["description"].widget.attrs = {"size": "40", "placeholder": "Descrição"}
         self.fields["value"].widget.attrs["placeholder"] = "Valor"
-        self.fields["status"].widget.attrs["placeholder"] = "Status"
+        self.fields["status"].widget.attrs = {"placeholder": "Status"}

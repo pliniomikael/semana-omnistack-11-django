@@ -71,7 +71,6 @@ def casosdelete(request, pk):
     return redirect("painel")
 
 
-@login_required(login_url="login")
 def casosregistrarpage(request):
     if request.method == "POST":
         formcasos = CreateCase(request.POST)
@@ -83,7 +82,7 @@ def casosregistrarpage(request):
     else:
         formcasos = CreateCase()
     context = {"formcasos": formcasos}
-
+    print(formcasos)
     return render(request, "register_case.html", context)
 
 
@@ -109,14 +108,14 @@ def logoutpage(request):
 def editcase(request, pk):
     caso = Case.objects.get(id=pk)
     if request.method == "POST":
-        formcasos = CreateCase(request.POST, instance=caso)
+        formcasos = EditCase(request.POST, instance=caso)
         if formcasos.is_valid():
             case = formcasos.save(commit=False)
             case.ong_name = request.user
             case.save()
             return redirect("painel")
     else:
-        formcasos = CreateCase(instance=caso)
+        formcasos = EditCase(instance=caso)
     context = {"formcasos": formcasos}
     return render(request, "edit_case.html", context)
 

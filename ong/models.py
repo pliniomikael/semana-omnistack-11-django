@@ -64,7 +64,7 @@ class Case(models.Model):
 
     ong_name = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     title_case = models.CharField(max_length=200, null=True)
-    description = models.TextField(max_length=500, null=True)
+    description = models.TextField(max_length=3000, null=True)
     value = models.DecimalField(max_digits=7, decimal_places=2)
     status = models.CharField(choices=STATUS, default="ABERTO", null=False, max_length=11)
     datahora = models.DateTimeField(default=datetime.now, blank=False,)
