@@ -171,7 +171,7 @@
         {% for todo in todos %}
         <li>
             <strong>ONG:</strong>
-            <p>{{todo.ong_name}}</p>
+            <p>{{todo.ong_name.first_name}}</p>
             <strong>CASO:</strong>
             <p>{{todo.title_case}}</p>
             <strong>DESCRIÇÃO:</strong>

@@ -24,7 +24,6 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Django](https://www.djangoproject.com/)
-- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 
 ## 💻 Projeto
