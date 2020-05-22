@@ -17,7 +17,7 @@
 
 <br>
 
-<img src = "screenshots/home.jpg" width ="250" /><img src = "screenshots/dashboard.jpg" width ="250" />
+<img src = "screenshots/home.jpg" width ="50%" /><img src = "screenshots/dashboard.jpg" width ="50%" />
 
 ## :rocket: Tecnologias
 
