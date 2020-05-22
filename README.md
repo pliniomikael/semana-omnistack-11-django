@@ -9,7 +9,7 @@
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#hammer-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
@@ -17,8 +17,7 @@
 
 <br>
 
-<img src = "screenshots/home.jpg" width ="250" />
-<img src = "screenshots/dashboard.jpg" width ="250" />
+<img src = "screenshots/home.jpg" width ="250" /><img src = "screenshots/dashboard.jpg" width ="250" />
 
 ## :rocket: Tecnologias
 
@@ -36,7 +35,7 @@ O BeTheHero é um projeto que visa conectar pessoas que desejam fazer contribui�
 
 Dentro da pasta do projeto execute
 
-instalação dos pacotes:
+Instalação dos pacotes:
 
 ```
 pip install -r requirements.txt
