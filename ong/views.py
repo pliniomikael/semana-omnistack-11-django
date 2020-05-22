@@ -82,7 +82,6 @@ def casosregistrarpage(request):
     else:
         formcasos = CreateCase()
     context = {"formcasos": formcasos}
-    print(formcasos)
     return render(request, "register_case.html", context)
 
 
