@@ -9,6 +9,7 @@
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
@@ -16,9 +17,8 @@
 
 <br>
 
-<p align="center">
-  <img alt="BeTheHero" src="https://github.com/Rocketseat/semana-omnistack-11/raw/master/.github/bethehero.png" width="100%">
-</p>
+<img src = "screenshots/home.jpg" width ="250" />
+<img src = "screenshots/dashboard.jpg" width ="250" />
 
 ## :rocket: Tecnologias
 
@@ -31,6 +31,40 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
 O BeTheHero é um projeto que visa conectar pessoas que desejam fazer contribuições monetárias a ONG's (Organizações não governamentais) que precisam de ajuda.
+
+## :hammer: Instalação
+
+Dentro da pasta do projeto execute
+
+instalação dos pacotes:
+
+```
+pip install -r requirements.txt
+```
+
+Preparar os arquivos de migração:
+
+```
+python manage.py makemigrations
+```
+
+Para aplicar as migrações no model execute:
+
+```
+python manage.py migrate
+```
+
+Criação do Usuário Admin:
+
+```
+python manage.py createsuperuser
+```
+
+Rodando a Aplicação:
+
+```
+python manage.py runserver
+```
 
 ## 🔖 Layout
 
