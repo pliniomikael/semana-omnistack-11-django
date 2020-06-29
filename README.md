@@ -1,9 +1,11 @@
+
+  ![Django CI](https://github.com/pliniomikael/semana-omnistack-11-django/workflows/Django%20CI/badge.svg)
 <h1 align="center">
     <img alt="DevRadar" title="#delicinha" src="https://github.com/Rocketseat/semana-omnistack-11/raw/master/.github/bethehero.svg?sanitize=true" width="200px" />
 </h1>
 
 <h4 align="center">
-  🚀 Semana OmniStack 11.0 - Django <img alt="DevRadar" title="#delicinha" src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="60px" />
+  🚀 Semana OmniStack 11.0 - Django <img alt="DevRadar" title="#delicinha" src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="60px" /> 
 </h4>
 
 <p align="center">
