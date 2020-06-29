@@ -66,8 +66,10 @@ class Case(models.Model):
     title_case = models.CharField(max_length=200, null=True)
     description = models.TextField(max_length=3000, null=True)
     value = models.DecimalField(max_digits=7, decimal_places=2)
-    status = models.CharField(choices=STATUS, default="ABERTO", null=False, max_length=11)
-    datahora = models.DateTimeField(default=datetime.now, blank=False,)
+    status = models.CharField(
+        choices=STATUS, default="ABERTO", null=False, max_length=11
+    )
+    datahora = models.DateTimeField(auto_now_add=True, blank=False,)
 
     def __str__(self):
         return self.title_case
