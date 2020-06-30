@@ -29,5 +29,5 @@ jobs:
       run: |
         python manage.py test
     - name: Upload Coverage to Codecov
-      CODECOV_TOKEN: 3660ae50-0b3c-42e9-bb82-bbb3f43a5851
-      run: bash <(curl -s https://codecov.io/bash)  
+      run: |
+        bash <(curl -s https://codecov.io/bash)  
