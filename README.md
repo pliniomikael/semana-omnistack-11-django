@@ -1,5 +1,6 @@
 
   ![Django CI](https://github.com/pliniomikael/semana-omnistack-11-django/workflows/Django%20CI/badge.svg)
+[![codecov](https://codecov.io/gh/pliniomikael/semana-omnistack-11-django/branch/master/graph/badge.svg)](https://codecov.io/gh/pliniomikael/semana-omnistack-11-django)
 <h1 align="center">
     <img alt="DevRadar" title="#delicinha" src="https://github.com/Rocketseat/semana-omnistack-11/raw/master/.github/bethehero.svg?sanitize=true" width="200px" />
 </h1>
