@@ -28,6 +28,7 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
+        coverage run --source='.' manage.py test
     - name: Upload Coverage to Codecov
       run: |
         bash <(curl -s https://codecov.io/bash)  
