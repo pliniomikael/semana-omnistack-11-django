@@ -131,7 +131,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
 
-"""
 AWS_ACCESS_KEY_ID = "AKIA5GSFIO4TDFE6DBEF"
 AWS_SECRET_ACCESS_KEY = "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"
 AWS_STORAGE_BUCKET_NAME = "semanadjango11"
@@ -139,4 +138,3 @@ AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-"""
