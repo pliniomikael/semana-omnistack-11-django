@@ -77,17 +77,29 @@
   <div class="content">
     <section>
       <a href="{% url 'home' %}">
-        <img src="{% static 'logo.svg' %}" alt="Be the Hero" /></a>
+        <img
+          src="{% static 'logo.svg' %}"
+          alt="Be the Hero"
+        /></a>
 
       <h1>Cadastro</h1>
       <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sua ONG.</p>
 
-      <a class="back-link" href="{% url 'login' %}">
-        <img style="width: 24px; height: 24px;" src="{% static 'voltar.png' %}"></img> Já tenho cadastro
+      <a
+        class="back-link"
+        href="{% url 'login' %}"
+      >
+        <img
+          style="width: 24px; height: 24px;"
+          src="{% static 'Voltar.png' %}"
+        ></img> Já tenho cadastro
       </a>
     </section>
 
-    <form method="POST" action="">
+    <form
+      method="POST"
+      action=""
+    >
       {% csrf_token %}
       {{form.first_name}}
       {{form.email}}
@@ -101,7 +113,10 @@
         {{form.city}}
         {{form.uf}}
       </div>
-      <button class="button" type="submit">Cadastrar</button>
+      <button
+        class="button"
+        type="submit"
+      >Cadastrar</button>
     </form>
   </div>
 </div>
