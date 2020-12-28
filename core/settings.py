@@ -1,4 +1,7 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -12,11 +15,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "_s6ll&sg6lwb8dk#u=#6)1kpx3y90x-p5=w#cn_zhe5**n%%*4"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    "semanadjango11.herokuapp.com",
-]
+ALLOWED_HOSTS = ["semanadjango11.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
@@ -72,10 +73,10 @@ WSGI_APPLICATION = "core.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "d7cghtsai6gl02",
+        "NAME": os.getenv("NAME"),
         "USER": "reqicoxuduecpy",
-        "PASSWORD": "f2c95d6d89aa2dd78f6b85800e4e2de61904be43b55aa156e88e859e81207bb8",
-        "HOST": "ec2-54-162-207-150.compute-1.amazonaws.com",
+        "PASSWORD": os.getenv("PASSWORD"),
+        "HOST": os.getenv("HOST"),
         "PORT": "5432",
     }
 }
@@ -131,9 +132,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
 
-AWS_ACCESS_KEY_ID = "AKIA5GSFIO4TDFE6DBEF"
-AWS_SECRET_ACCESS_KEY = "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"
-AWS_STORAGE_BUCKET_NAME = "semanadjango11"
+AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
