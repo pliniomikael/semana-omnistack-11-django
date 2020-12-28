@@ -6,124 +6,132 @@
 
 {% block content %}
 <style>
-    .profile-container {
-        width: 100%;
-        max-width: 1180px;
-        padding: 0 30px;
-        margin: 32px auto;
-    }
+  .profile-container {
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 30px;
+    margin: 32px auto;
+  }
 
-    .profile-container header {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
+  .profile-container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
 
-    .profile-container header img {
-        height: 64px;
-    }
+  .profile-container header img {
+    height: 64px;
+  }
 
-    .profile-container header a {
-        width: 260px;
-        margin-left: auto;
-        margin-top: 0;
-        justify-content: space-between;
+  .profile-container header a {
+    width: 260px;
+    margin-left: auto;
+    margin-top: 0;
+    justify-content: space-between;
 
-    }
+  }
 
-    .profile-container ul {
-        margin-top: 80px;
+  .profile-container ul {
+    margin-top: 80px;
 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 24px;
-        list-style: none;
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    list-style: none;
+  }
 
-    .profile-container ul li {
-        background: #FFF;
-        padding: 24px;
-        border-radius: 8px;
-        position: relative;
-    }
+  .profile-container ul li {
+    background: #FFF;
+    padding: 24px;
+    border-radius: 8px;
+    position: relative;
+  }
 
-    .profile-container ul li button {
-        position: absolute;
-        right: 24px;
-        top: 24px;
-        border: 0;
-    }
+  .profile-container ul li button {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    border: 0;
+  }
 
-    .profile-container ul li .btn-edit {
-        position: absolute;
-        right: 24px;
-        top: 85%;
-        border: 0;
-    }
+  .profile-container ul li .btn-edit {
+    position: absolute;
+    right: 24px;
+    top: 85%;
+    border: 0;
+  }
 
-    .profile-container ul li button:hover {
-        opacity: 0.8;
-    }
+  .profile-container ul li button:hover {
+    opacity: 0.8;
+  }
 
-    .profile-container ul li strong {
-        display: block;
-        margin-bottom: 16px;
-        color: #41414d;
-    }
+  .profile-container ul li strong {
+    display: block;
+    margin-bottom: 16px;
+    color: #41414d;
+  }
 
-    .profile-container ul li p+strong {
-        margin-top: 32px;
-    }
+  .profile-container ul li p+strong {
+    margin-top: 32px;
+  }
 
-    .profile-container ul li p {
-        color: #737380;
-        line-height: 21px;
-        font-size: 16px;
-    }
+  .profile-container ul li p {
+    color: #737380;
+    line-height: 21px;
+    font-size: 16px;
+  }
 
-    .button-whats {
-        width: 90%;
-        height: 60px;
-        background: #e02041;
-        border: 0;
-        border-radius: 8px;
-        color: #FFF;
-        font-weight: 700;
-        margin-top: 40%;
-        text-align: center;
-        font-size: 18px;
-        line-height: 60px;
-        transition: filter 0.2s;
-    }
+  .button-whats {
+    width: 90%;
+    height: 60px;
+    background: #e02041;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    margin-top: 40%;
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.2s;
+  }
 </style>
 <div class="profile-container">
-    <header>
-        <a href="{% url 'home' %}">
-            <img src="{% static 'logo.svg' %}" alt="Be the Hero" /></a>
-        <a href="{% url 'home' %}">
+  <header>
+    <a href="{% url 'home' %}">
+      <img
+        src="{% static 'logo.svg' %}"
+        alt="Be the Hero"
+      /></a>
+    <a href="{% url 'home' %}">
 
-            <img style="width: 24px; height: 24px;" src="{% static 'voltar.png' %}"></img> </a>
-    </header>
+      <img
+        style="width: 24px; height: 24px;"
+        src="{% static 'Voltar.png' %}"
+      ></img> </a>
+  </header>
 
-    <ul>
-        <li>
-            <strong>CASO:</strong>
-            <p>{{caso.title_case}}</p>
-            <strong>DESCRIÇÃO:</strong>
-            <p> {{caso.description}} </p>
-            <strong>VALOR:</strong>
-            <p>R$ {{caso.value}} reais</p>
-        </li>
+  <ul>
+    <li>
+      <strong>CASO:</strong>
+      <p>{{caso.title_case}}</p>
+      <strong>DESCRIÇÃO:</strong>
+      <p> {{caso.description}} </p>
+      <strong>VALOR:</strong>
+      <p>R$ {{caso.value}} reais</p>
+    </li>
 
-        <li>
-            <strong style="text-align: center; font-size: 25px;">Salve o dia!</strong>
-            <strong style="text-align: center;">Seja o héroi desse caso</strong>
-            <p style="text-align: center;"> Entre em contato </p>
-            <a
-                href="https://api.whatsapp.com/send?phone=55{{caso.ong_name.whatsapp}}&text=Ol%C3%A1%2C%20eu%20vi%20a%20sua%20causa%20no%20site%20e%20gostaria%20de%20ajudar!">
-                <button class=" button-whats" type="submit">Whatsapp</button>
-            </a>
-        </li>
-    </ul>
+    <li>
+      <strong style="text-align: center; font-size: 25px;">Salve o dia!</strong>
+      <strong style="text-align: center;">Seja o héroi desse caso</strong>
+      <p style="text-align: center;"> Entre em contato </p>
+      <a href="https://api.whatsapp.com/send?phone=55{{caso.ong_name.whatsapp}}&text=Ol%C3%A1%2C%20eu%20vi%20a%20sua%20causa%20no%20site%20e%20gostaria%20de%20ajudar!">
+        <button
+          class=" button-whats"
+          type="submit"
+        >Whatsapp</button>
+      </a>
+    </li>
+  </ul>
 </div> {% endblock %}

@@ -59,20 +59,35 @@
   <div class="content">
     <section>
       <a href="{% url 'home' %}">
-        <img src="{% static 'logo.svg' %}" alt="Be the Hero" /></a>
+        <img
+          src="{% static 'logo.svg' %}"
+          alt="Be the Hero"
+        /></a>
 
       <h1>Cadastrar novo caso</h1>
       <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
 
-      <a href="{% url 'painel' %}" class="btn back-link">
+      <a
+        href="{% url 'painel' %}"
+        class="btn back-link"
+      >
         {% comment %}
-        <FiArrowLeft size={16} color="#E02041" /> {% endcomment %}
-        <img style="width: 24px; height: 24px;" src="{% static 'voltar.png' %}"></img>
+        <FiArrowLeft
+          size={16}
+          color="#E02041"
+        /> {% endcomment %}
+        <img
+          style="width: 24px; height: 24px;"
+          src="{% static 'Voltar.png' %}"
+        ></img>
         Voltar para home
       </a>
     </section>
 
-    <form method="POST" action="">
+    <form
+      method="POST"
+      action=""
+    >
       {% csrf_token %}
       {{formcasos.title_case}}
 
@@ -80,7 +95,10 @@
 
       {{formcasos.value}}
 
-      <button class="button" type="submit">Cadastrar</button>
+      <button
+        class="button"
+        type="submit"
+      >Cadastrar</button>
     </form>
   </div>
 </div>
