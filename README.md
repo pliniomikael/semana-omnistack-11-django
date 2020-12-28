@@ -24,7 +24,7 @@
 ## :rocket: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
-- [Link Para o Projeto](https://www.semanadjango11.herokuapp.com)
+- [Link Para o Projeto](https://semanadjango11.herokuapp.com/)
 - [Django](https://www.djangoproject.com/)
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 
