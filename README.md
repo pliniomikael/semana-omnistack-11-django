@@ -8,7 +8,6 @@
 <h4 align="center">
   🚀 Semana OmniStack 11.0 - Django <img alt="DevRadar" title="#delicinha" src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="60px" /> 
 </h4>
-
 <p align="center">
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -25,13 +24,14 @@
 ## :rocket: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
-
+- [Link Para o Projeto](https://www.semanadjango11.herokuapp.com)
 - [Django](https://www.djangoproject.com/)
 - [Django Rest Framework](https://www.django-rest-framework.org/)
 
 ## 💻 Projeto
 
 O BeTheHero é um projeto que visa conectar pessoas que desejam fazer contribuições monetárias a ONG's (Organizações não governamentais) que precisam de ajuda.
+
 
 ## :hammer: Instalação
 

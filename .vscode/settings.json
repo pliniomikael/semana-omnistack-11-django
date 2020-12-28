@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Snow Kadmos\\envs\\hero\\Scripts\\python.exe"
+    "python.pythonPath": "/home/snowkadmos/.virtualenvs/semana/bin/python",
+    "python.formatting.provider": "black"
 }
