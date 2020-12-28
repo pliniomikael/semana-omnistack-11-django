@@ -1,6 +1,8 @@
 import os
 from dotenv import load_dotenv
 
+import dj_database_url
+
 load_dotenv()
 
 
@@ -78,11 +80,16 @@ DATABASES = {
         "PASSWORD": os.getenv("PASSWORD"),
         "HOST": os.getenv("HOST"),
         "PORT": "5432",
+        "TEST": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": "testdb",
+        },
     }
 }
 
 AUTH_USER_MODEL = "ong.User"
 
+DATABASES["default"] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
