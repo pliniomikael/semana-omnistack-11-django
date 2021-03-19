@@ -13,7 +13,7 @@ Django==3.0.7
 django-cors-headers==3.6.0
 django-money==1.1
 django-storages==1.11.1
-djangorestframework==3.11.0
+djangorestframework==3.11.2
 gunicorn==20.0.4
 idna==2.10
 jmespath==0.10.0
